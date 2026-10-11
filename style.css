@@ -54,6 +54,9 @@ h2 { font: 600 clamp(1.5rem, 3vw, 2.1rem)/1.2 var(--serif); color: var(--ink); m
 .cols { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: 48px; align-items: start; }
 .cols p, section > .wrap > p { max-width: 62ch; margin: 0 0 14px; }
 ol.steps { margin: 0; padding: 0; list-style: none; counter-reset: s; }
+ol.steps[start="2"] { counter-reset: s 1; }
+ol.steps[start="3"] { counter-reset: s 2; }
+ol.steps[start="4"] { counter-reset: s 3; }
 ol.steps li { counter-increment: s; padding: 0 0 18px 52px; position: relative; max-width: 62ch; }
 ol.steps li::before { content: counter(s); position: absolute; left: 0; top: -2px; width: 34px; height: 34px; border: 1px solid var(--ink); border-radius: 50%; text-align: center; line-height: 32px; font: 600 1rem var(--serif); color: var(--ink); background: var(--sheet); }
 ol.steps strong { color: var(--ink); }
