@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ComptaIA - remplit vos classeurs Excel à partir de vos factures</title>
+<meta name="description" content="ComptaIA lit les factures, relevés et documents d'un dossier et remplit votre modèle Excel. Vous approuvez chaque modification avant son enregistrement.">
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&family=Spectral:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <a class="brand" href="./">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="8" fill="#14365d"/><path d="M21 10.5A7.5 7.5 0 1 0 21 21.5" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round"/><circle cx="23.5" cy="16" r="2.4" fill="#f2b134"/></svg>
+      ComptaIA
+    </a>
+    <nav aria-label="Navigation principale">
+      <a href="#fonctionnement" data-i18n="nav-fn">Fonctionnement</a>
+      <a href="#vos-donnees" data-i18n="nav-data">Vos données</a>
+      <a href="#tarifs" data-i18n="nav-pricing">Tarifs</a>
+      <a href="guide.html" data-i18n="nav-guide">Guide d'installation</a>
+      <a href="#acces" data-i18n="nav-access">Demander l'accès</a>
+    </nav>
+    <div class="lang-toggle" role="group" aria-label="Langue / Language">
+      <button data-lang="fr" class="active">FR</button>
+      <button data-lang="en">EN</button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="hero">
+    <div class="wrap">
+      <h1 data-i18n="hero-h1">Vos factures, dans vos classeurs Excel.</h1>
+      <p class="lead" data-i18n="hero-lead">ComptaIA lit les factures, relevés et documents d'un dossier, retrouve le compte du plan comptable et remplit votre modèle Excel. Vous approuvez chaque modification avant son enregistrement.</p>
+      <div class="actions">
+        <a class="button primary" href="#acces" data-i18n="hero-btn1">Demander l'accès à la bêta</a>
+        <a class="button plain" href="guide.html" data-i18n="hero-btn2">Lire le guide d'installation</a>
+      </div>
+
+      <div class="ledger" role="img" aria-label="Exemple : une facture à gauche, les deux lignes du journal des achats qu'elle devient à droite">
+        <div class="invoice">
+          <h3>Énergie Plus</h3>
+          <p data-i18n="inv-date">Facture 2026-09-7781, du 12/09/2026</p>
+          <dl>
+            <dt data-i18n="inv-l1">Abonnement septembre</dt><dd>48,20</dd>
+            <dt data-i18n="inv-l2">Consommation 1 842 kWh</dt><dd>264,30</dd>
+            <dt class="total" data-i18n="inv-tot1">Total HT</dt><dd class="total">312,50</dd>
+            <dt data-i18n="inv-vat1">TVA 5,5 %</dt><dd>2,65</dd>
+            <dt data-i18n="inv-vat2">TVA 20 %</dt><dd>52,86</dd>
+            <dt class="total" data-i18n="inv-tot2">Total TTC</dt><dd class="total">368,01</dd>
+          </dl>
+        </div>
+        <div class="journal">
+          <table class="journal-table">
+            <thead><tr>
+              <th data-i18n="th-date">Date</th><th data-i18n="th-invoice">N° facture</th><th data-i18n="th-supplier">Fournisseur</th>
+              <th data-i18n="th-desc">Désignation</th><th data-i18n="th-net">HT</th><th data-i18n="th-vatpct">TVA %</th>
+              <th data-i18n="th-vat">TVA</th><th data-i18n="th-gross">TTC</th><th data-i18n="th-account">Compte</th>
+            </tr></thead>
+            <tbody>
+              <tr><td class="w">12/09/2026</td><td class="w">2026-09-7781</td><td class="w">Énergie Plus</td><td class="w" data-i18n="row1-desc">Abonnement septembre</td><td class="w num">48,20</td><td class="w num">5,5 %</td><td class="w num">2,65</td><td class="w num">50,85</td><td class="w">6061</td></tr>
+              <tr><td class="w">12/09/2026</td><td class="w">2026-09-7781</td><td class="w">Énergie Plus</td><td class="w" data-i18n="row2-desc">Consommation 1 842 kWh</td><td class="w num">264,30</td><td class="w num">20 %</td><td class="w num">52,86</td><td class="w num">317,16</td><td class="w">6061</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <p class="caption" data-i18n="caption-ledger">Un coin bleu marque chaque cellule écrite par ComptaIA ; au survol, il indique la valeur d'avant.</p>
+    </div>
+  </div>
+
+  <section id="fonctionnement">
+    <div class="wrap">
+      <h2 data-i18n="fn-h2">Quatre gestes, du dossier au journal rempli</h2>
+      <ol class="steps">
+        <li><strong data-i18n="fn-1-t">Ouvrez le classeur à remplir.</strong><span data-i18n="fn-1"> Son dossier est l'endroit où ComptaIA travaille. Vos documents (Word, PowerPoint, PDF, images, texte) y sont cochés d'avance.</span></li>
+        <li><strong data-i18n="fn-2-t">Cochez les documents et les feuilles à remplir.</strong><span data-i18n="fn-2"> Ajoutez une consigne si besoin, par exemple « une ligne par facture et par taux de TVA ».</span></li>
+        <li><strong data-i18n="fn-3-t">Lancez « Remplir le classeur ».</strong><span data-i18n="fn-3"> ComptaIA lit chaque document, cherche les numéros de compte dans votre plan comptable et prépare les modifications.</span></li>
+        <li><strong data-i18n="fn-4-t">Approuvez, puis demandez la suite.</strong><span data-i18n="fn-4"> Une fois le classeur rempli, l'onglet Classeur le montre tel quel. Demandez des totaux, une feuille de synthèse ou un graphique, ou corrigez une cellule vous-même.</span></li>
+      </ol>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap cols">
+      <div>
+        <h2 data-i18n="own-h2">Le classeur reste le vôtre</h2>
+        <ul class="plain">
+          <li data-i18n="own-1">ComptaIA travaille sur une <strong>copie</strong> par défaut : l'original n'est pas modifié.</li>
+          <li data-i18n="own-2">Chaque lot de modifications vous est présenté, cellule par cellule, avant d'être écrit.</li>
+          <li data-i18n="own-3">La version précédente du classeur est <strong>sauvegardée</strong> avant chaque changement.</li>
+          <li data-i18n="own-4">Une cellule qui contient une formule n'est jamais écrasée.</li>
+          <li data-i18n="own-5">Les montants sont recopiés tels qu'ils sont imprimés ; les colonnes de contrôle de votre modèle montrent les écarts.</li>
+        </ul>
+      </div>
+      <figure>
+        <img src="img/classeur.png" alt="L'onglet Classeur de ComptaIA : le journal des achats rempli, avec un petit coin bleu sur les cellules écrites par ComptaIA" width="1280" height="760">
+        <figcaption data-i18n="fig-caption">L'onglet Classeur. Double-cliquez sur une cellule pour la modifier.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section id="vos-donnees">
+    <div class="wrap">
+      <h2 data-i18n="data-h2">Ce qui reste chez vous, et ce qui part</h2>
+      <p data-i18n="data-p1">ComptaIA est un programme qui s'installe sur votre PC. Il n'a pas de serveur à lui : vos classeurs, vos sauvegardes et votre base de connaissance restent sur votre ordinateur.</p>
+      <p data-i18n="data-p2">Pour lire un document, ComptaIA envoie son contenu (texte ou image des pages utiles) à un service d'intelligence artificielle, avec <strong>votre propre clé d'accès</strong>. Ce service vous facture directement ce que vous utilisez. La clé est conservée dans le coffre de votre système, jamais dans un fichier.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap cols">
+      <div>
+        <h2 data-i18n="not-h2">Ce que ComptaIA ne fait pas</h2>
+        <ul class="plain">
+          <li data-i18n="not-1">Il ne remplace pas un expert-comptable : il prépare, vous contrôlez.</li>
+          <li data-i18n="not-2">Il ne dépose aucune déclaration et ne fait aucun paiement.</li>
+          <li data-i18n="not-4">Il ne connaît le plan comptable que si vous le lui donnez : ajoutez-le à la base de connaissance.</li>
+        </ul>
+      </div>
+      <div>
+        <h2 data-i18n="config-h2">Configuration</h2>
+        <ul class="plain">
+          <li data-i18n="config-1">Windows, macOS ou Linux.</li>
+          <li data-i18n="config-2">Une connexion Internet.</li>
+          <li data-i18n="config-3">Une clé d'accès au service d'intelligence artificielle.</li>
+          <li data-i18n="config-4">Des classeurs au format .xlsx ou .xlsm.</li>
+        </ul>
+        <p data-i18n="config-p">L'interface est en français et en anglais.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="tarifs">
+    <div class="wrap">
+      <h2 data-i18n="price-h2">Tarifs</h2>
+      <p class="trial" data-i18n="price-trial">Les 7 premiers jours sont offerts, sans engagement.</p>
+      <div class="plans">
+        <div class="plan">
+          <span class="eyebrow" data-i18n="plan-student-e">Étudiant</span>
+          <h3 data-i18n="plan-student-n">Étudiant</h3>
+          <p class="price">10&nbsp;€<small data-i18n="plan-student-period">/mois</small></p>
+          <ul>
+            <li data-i18n="plan-student-l1">Sur justificatif de statut étudiant</li>
+            <li data-i18n="plan-student-l2">Toutes les fonctionnalités</li>
+          </ul>
+        </div>
+        <div class="plan featured">
+          <span class="eyebrow" data-i18n="plan-pro-e">Indépendant &amp; petite structure</span>
+          <h3 data-i18n="plan-pro-n">Professionnel</h3>
+          <p class="price">30&nbsp;€<small data-i18n="plan-pro-period">/mois</small></p>
+          <ul>
+            <li data-i18n="plan-pro-l1">Une personne</li>
+            <li data-i18n="plan-pro-l2">Toutes les fonctionnalités</li>
+          </ul>
+        </div>
+        <div class="plan">
+          <span class="eyebrow" data-i18n="plan-biz-e">Équipes &amp; cabinets</span>
+          <h3 data-i18n="plan-biz-n">Entreprise</h3>
+          <p class="price" data-i18n="plan-biz-price">Sur devis</p>
+          <ul>
+            <li data-i18n="plan-biz-l1">Plusieurs personnes, plusieurs classeurs</li>
+            <li data-i18n="plan-biz-l2">Parlons de vos besoins</li>
+          </ul>
+          <a class="button plain" href="#acces" data-i18n="plan-biz-btn">Demander un devis</a>
+        </div>
+      </div>
+      <p class="caption" data-i18n="price-note">Chaque personne utilise sa propre clé pour le service d'intelligence artificielle : son usage est facturé par ce service, séparément de l'abonnement.</p>
+    </div>
+  </section>
+
+  <section id="acces" class="access">
+    <div class="wrap">
+      <h2 data-i18n="access-h2">Bêta sur invitation</h2>
+      <p data-i18n="access-p">ComptaIA est en bêta fermée. Écrivez-nous en décrivant votre activité et le type de classeur que vous remplissez : nous vous envoyons le programme et le guide d'installation.</p>
+      <div class="actions">
+        <!-- A COMPLETER: l'adresse de contact. -->
+        <a class="button primary" href="mailto:VOTRE-ADRESSE@EXEMPLE.FR?subject=Acc%C3%A8s%20%C3%A0%20la%20b%C3%AAta%20ComptaIA" data-i18n="access-btn1">Demander l'accès</a>
+        <a class="button plain" style="border-color:#fff;color:#fff" href="guide.html" data-i18n="access-btn2">Voir le guide d'installation</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap" data-i18n="footer-1">ComptaIA n'est affilié à aucun fournisseur de modèle d'intelligence artificielle ni à Microsoft.</div>
+</footer>
+<script src="i18n.js"></script>
+</body>
+</html>

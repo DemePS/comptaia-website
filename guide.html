@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Installer ComptaIA — guide pas à pas</title>
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&family=Spectral:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="8" fill="#14365d"/><path d="M21 10.5A7.5 7.5 0 1 0 21 21.5" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round"/><circle cx="23.5" cy="16" r="2.4" fill="#f2b134"/></svg>
+      ComptaIA
+    </a>
+    <nav aria-label="Principal"><a href="index.html" data-i18n="g-nav-home">Présentation</a></nav>
+    <div class="lang-toggle" role="group" aria-label="Langue / Language">
+      <button data-lang="fr" class="active">FR</button>
+      <button data-lang="en">EN</button>
+    </div>
+  </div>
+</header>
+<main><section class="hero"><div class="wrap">
+  <h1 data-i18n="g-h1">Installer ComptaIA</h1>
+  <p class="lead" data-i18n="g-lead">Une dizaine de minutes la première fois. Il faut une connexion Internet.</p>
+
+  <h2 style="margin-top:36px" data-i18n="g-s1-h2">1. Télécharger et ouvrir</h2>
+  <ol class="steps">
+    <li><div><h3 data-i18n="g-s1-1-h">Téléchargez le fichier</h3><p data-i18n="g-s1-1-p">Vous recevez un lien vers un fichier <code>ComptaIA-windows.zip</code>. Enregistrez-le, puis faites un clic droit et choisissez « Extraire tout ».</p></div></li>
+    <li><div><h3 data-i18n="g-s1-2-h">Lancez ComptaIA</h3><p data-i18n="g-s1-2-p">Dans le dossier extrait, double-cliquez sur <code>ComptaIA.exe</code>. Gardez le dossier entier : l’application a besoin des fichiers qui l’accompagnent.</p></div></li>
+    <li><div><h3 data-i18n="g-s1-3-h">Suivez les premiers écrans</h3><p data-i18n="g-s1-3-p">Au premier lancement, ComptaIA vous guide pour finir la mise en route. Suivez simplement les étapes affichées à l’écran.</p></div></li>
+  </ol>
+
+  <h2 style="margin-top:44px" data-i18n="g-s2-h2">2. Un premier remplissage</h2>
+  <figure><img src="img/fenetre.png" alt="La fenêtre de ComptaIA : le classeur, la liste des documents et le bouton Remplir le classeur" width="1280" height="760">
+  <figcaption data-i18n="g-s2-fig">La fenêtre de ComptaIA avec un dossier ouvert.</figcaption></figure>
+  <ol class="steps">
+    <li><div><h3 data-i18n="g-s2-1-h">Ouvrez un classeur</h3><p data-i18n="g-s2-1-p">Cliquez sur <b>Ouvrir un classeur…</b> et choisissez votre modèle Excel. Son dossier est l’endroit où ComptaIA travaille.</p>
+      <figure><img src="img/modele.png" alt="Les colonnes d'un journal d'achats : Date, N° facture, Fournisseur, Désignation, HT, Taux TVA, TVA, TTC, Compte, Contrôle TVA, Contrôle TTC" width="1290" height="217">
+      <figcaption data-i18n="g-s2-1-fig">Exemple de colonnes d'un journal d'achats. Les deux dernières sont des formules qui signalent un écart.</figcaption></figure>
+    </div></li>
+    <li><div><h3 data-i18n="g-s2-2-h">Ajoutez votre plan comptable</h3><p data-i18n="g-s2-2-p">Dans <b>Base de connaissance</b>, ajoutez le <a href="https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf">Plan Comptable Général — Règlement ANC 2014-03 (version 2026)</a> et les textes dont l’agent a besoin. Il y cherche les numéros de compte.</p></div></li>
+    <li><div><h3 data-i18n="g-s2-3-h">Cochez les documents et lancez</h3><p data-i18n="g-s2-3-p">Gardez <b>Travailler sur une copie</b> cochée la première fois, puis cliquez sur <b>Remplir le classeur</b>. Vous approuvez les modifications avant leur écriture.</p></div></li>
+  </ol>
+
+</div></section></main>
+<footer><div class="wrap"><p><a href="index.html" data-i18n="g-back">Retour à la présentation</a></p></div></footer>
+<script src="i18n.js"></script>
+</body>
+</html>
