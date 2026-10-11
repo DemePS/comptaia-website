@@ -83,7 +83,6 @@ const EN = {
   'plan-biz-e': 'Teams & firms', 'plan-biz-n': 'Business', 'plan-biz-price': 'Ask for a quote',
   'plan-biz-l1': 'Several people, several workbooks', 'plan-biz-l2': 'Talk to us about your needs',
   'plan-biz-btn': 'Ask for a quote',
-  'price-note': "Each person uses their own AI service key: its usage is billed by that service directly, separately from the subscription.",
 
   'access-h2': 'Invitation-only beta',
   'access-p': "ComptaIA is in closed beta. Write to us describing your activity and the kind of workbook you fill: we will send you the program and the install guide.",
