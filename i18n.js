@@ -10,8 +10,8 @@ const EN = {
   'nav-pricing': 'Pricing',
   'nav-access': 'Request access',
 
-  'hero-h1': 'Your invoices, in your Excel workbooks.',
-  'hero-lead': 'ComptaIA reads the invoices, statements and documents of a folder, finds the account in your chart of accounts, and fills your Excel template. You approve every change before it is saved.',
+  'hero-h1': 'Your invoices, in your workbooks.',
+  'hero-lead': 'ComptaIA reads the invoices, statements and documents of a folder, finds the account in your chart of accounts, and fills your workbook. You approve every change before it is saved.',
   'hero-btn1': 'Request beta access',
   'hero-btn2': 'Read the install guide',
 
