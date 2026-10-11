@@ -25,7 +25,6 @@ const EN = {
   'th-date': 'Date', 'th-invoice': 'Invoice no.', 'th-supplier': 'Supplier', 'th-desc': 'Description',
   'th-net': 'Net', 'th-vatpct': 'VAT %', 'th-vat': 'VAT', 'th-gross': 'Gross', 'th-account': 'Account',
   'row1-desc': 'Subscription, September', 'row2-desc': 'Consumption, 1,842 kWh',
-  'caption-ledger': 'A blue corner marks each cell ComptaIA wrote; hover it to see the value it replaced.',
 
   'fn-h2': 'Four steps, from the folder to the filled journal',
   'fn-1-t': 'Open the workbook to fill.', 'fn-1': ' Its folder is where ComptaIA works. Your documents (Word, PowerPoint, PDF, images, text) are ticked there in advance.',
