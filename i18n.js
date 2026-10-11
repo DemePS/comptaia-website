@@ -39,7 +39,6 @@ const EN = {
   'own-4': 'A cell that holds a formula is never overwritten.',
   'own-5': "Amounts are copied as printed; your template's control columns show the differences.",
   'own-6': 'Auto mode lets ComptaIA work on its own: it gives you a report at the end, pointing out where your judgment is needed. When in doubt, it leaves a cell empty rather than filling it in.',
-  'fig-caption': 'The Workbook tab. Double-click a cell to change it.',
 
   'data-h2': 'What stays on your PC, and what leaves it',
   'data-p1': "ComptaIA is a program installed on your PC. It has no server of its own: your workbooks, your backups and your knowledge base stay on your computer.",
@@ -73,7 +72,6 @@ const EN = {
   'config-1': 'Windows, macOS or Linux.',
   'config-2': 'An Internet connection.',
   'config-3': 'An access key for the AI service.',
-  'config-4': 'Workbooks in .xlsx or .xlsm format.',
   'config-p': 'The interface is in French and in English.',
 
   'price-h2': 'Pricing',
