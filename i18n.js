@@ -52,7 +52,7 @@ const EN = {
 
   'g-nav-home': 'Overview',
   'g-h1': 'Install ComptaIA',
-  'g-lead': 'About ten minutes the first time. You need an Internet connection.',
+  'g-lead': 'You need an Internet connection.',
   'g-s1-h2': '1. Download and open',
   'g-s1-1-h': 'Download the file',
   'g-s1-1-p': 'You get a link to a <code>ComptaIA-windows.zip</code> file. Save it, right-click it, and choose "Extract all."',
