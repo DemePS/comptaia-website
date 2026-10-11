@@ -64,7 +64,7 @@ const EN = {
   'g-s2-fig': 'The ComptaIA window with a folder open.',
   'g-s2-1-h': 'Open a workbook',
   'g-s2-1-p': 'Click <b>Open workbook…</b> and choose your Excel template. Its folder is where ComptaIA works.',
-  'g-s2-1-fig': 'Example columns of a purchase journal. The last two are formulas that flag a discrepancy.',
+  'g-s2-1-fig': 'Example columns of a purchase journal.',
   'g-s2-2-h': 'Add your chart of accounts',
   'g-s2-2-p': 'In <b>Knowledge base</b>, add the <a href="https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf">Plan Comptable Général — ANC Regulation 2014-03 (2026 version)</a> and any texts the agent needs, to give it context.',
   'g-s2-3-h': 'Tick the documents and run it',
