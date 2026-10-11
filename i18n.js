@@ -55,7 +55,7 @@ const EN = {
   'g-lead': 'You need an Internet connection.',
   'g-s1-h2': '1. Download and open',
   'g-s1-1-h': 'Download the file',
-  'g-s1-1-p': 'You get a link to a <code>ComptaIA-windows.zip</code> file. Save it, right-click it, and choose "Extract all."',
+  'g-s1-1-p': 'You get a link to a <code>ComptaIA-windows.zip</code> file. Save it and extract it.',
   'g-s1-2-h': 'Launch ComptaIA',
   'g-s1-2-p': 'In the extracted folder, double-click <code>ComptaIA.exe</code>. Keep the whole folder: the app needs the files next to it.',
   'g-s1-3-h': 'Follow the first screens',
