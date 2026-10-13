@@ -7,7 +7,12 @@ kv_namespaces = [
   { binding = "LICENSES", id = "a4a73e2221a14b5a97197fcc003b6e68" }
 ]
 
+# ComptaIA-windows.zip, uploaded here by the build workflow on every release. The comptaia repo
+# (source + GitHub Releases) stays private; this bucket is the public download path.
+r2_buckets = [
+  { binding = "RELEASES", bucket_name = "comptaia-releases" }
+]
+
 # Allowed origin for the confirmation page's browser call to /claim.
-# TODO: confirm the real domain (GitHub Pages? a custom domain?) and update this.
 [vars]
 ALLOWED_ORIGIN = "https://demeps.github.io"

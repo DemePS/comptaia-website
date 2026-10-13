@@ -11,6 +11,11 @@
  *   and asks Stripe, live, whether they have an active (or trialing) subscription. There is no
  *   webhook and nothing is cached here: a cancellation in Stripe is reflected on the very next
  *   call, with no extra plumbing.
+ *
+ * GET /download
+ *   Streams ComptaIA-windows.zip from the RELEASES R2 bucket. The comptaia repo (source + GitHub
+ *   Releases) stays private; this is the one public way to get the file. The build workflow
+ *   uploads the zip here on every release.
  */
 
 const STRIPE_API = "https://api.stripe.com/v1"
@@ -64,6 +69,22 @@ async function handleClaim(url, env) {
   return { license_key: key, status: 200 }
 }
 
+const RELEASE_FILE = "ComptaIA-windows.zip"
+
+async function handleDownload(env, headers) {
+  const obj = await env.RELEASES.get(RELEASE_FILE)
+  if (!obj) return new Response("not found", { status: 404, headers })
+  return new Response(obj.body, {
+    status: 200,
+    headers: {
+      ...headers,
+      "Content-Type": "application/zip",
+      "Content-Disposition": `attachment; filename="${RELEASE_FILE}"`,
+      "Content-Length": String(obj.size),
+    },
+  })
+}
+
 async function handleVerify(url, env) {
   const key = (url.searchParams.get("key") || "").trim().toUpperCase()
   if (!key) return { active: false, reason: "missing_key", status: 400 }
@@ -82,6 +103,8 @@ export default {
     const headers = cors(env)
 
     if (request.method === "OPTIONS") return new Response(null, { headers })
+
+    if (url.pathname === "/download") return handleDownload(env, headers)
 
     try {
       let result
