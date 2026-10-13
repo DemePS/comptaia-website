@@ -12,11 +12,20 @@ Fait. URL : `https://comptaia-license.demeps.workers.dev`
 ## 4. ✅ Domaine confirmé
 `https://demeps.github.io/comptaia-website/` — `ALLOWED_ORIGIN` et `SUBSCRIBE_URL` mis à jour en conséquence.
 
-## 5. Publier une release du logiciel sur GitHub (reste à faire)
-- Repo `comptaia` : pousser un tag `v...` (ex. `v0.1.3`) pour déclencher le build Windows et publier
-  automatiquement `ComptaIA-windows.zip` comme GitHub Release.
-- Une fois publiée, vérifier que le lien "Télécharger ComptaIA" de `confirmation.html` (actuellement
-  `releases/latest`) fonctionne bien.
+## 5. ✅ Release du logiciel publiée sur GitHub
+`v0.1.3`, avec `ComptaIA-windows.zip` attaché.
+
+## 6. Rendre le téléchargement accessible aux clients (reste à faire)
+Le repo `comptaia` est **privé** : le lien direct vers `releases/latest/download/...` renvoie une
+404 pour un client non connecté à GitHub. Le téléchargement passe maintenant par un bucket R2
+(`/download` sur le Worker), mais il faut encore, côté Cloudflare + GitHub (voir
+`license-worker/README.md`, section "Mettre le logiciel dans le bucket") :
+- Créer le bucket R2 : `npx wrangler r2 bucket create comptaia-releases`
+- Créer un jeton d'API R2 (Cloudflare Dashboard → R2 → Manage R2 API Tokens, Object Read & Write)
+- Ajouter 3 secrets au repo **comptaia** (Settings → Secrets and variables → Actions) :
+  `R2_ACCOUNT_ID`, `R2_ACCESS_KEY_ID`, `R2_SECRET_ACCESS_KEY`
+- Redéployer le Worker (`npx wrangler deploy` dans `license-worker/`)
+- Relancer le build (Actions → Build Windows app → Run workflow) pour que le zip soit poussé vers R2
 
 ## Pour vérifier que tout marche
 1. Payer avec un Payment Link Stripe (ou en mode test).
