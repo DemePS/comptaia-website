@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /confirmation.html
+
+Sitemap: https://demeps.github.io/comptaia-website/sitemap.xml
