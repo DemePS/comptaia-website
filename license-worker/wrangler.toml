@@ -1,12 +1,13 @@
 name = "comptaia-license"
 main = "src/index.js"
 compatibility_date = "2024-11-01"
+workers_dev = true
 
-# Created by `wrangler kv namespace create LICENSES`; paste the id it prints here.
 kv_namespaces = [
-  { binding = "LICENSES", id = "REPLACE_WITH_KV_NAMESPACE_ID" }
+  { binding = "LICENSES", id = "a4a73e2221a14b5a97197fcc003b6e68" }
 ]
 
 # Allowed origin for the confirmation page's browser call to /claim.
+# TODO: confirm the real domain (GitHub Pages? a custom domain?) and update this.
 [vars]
-ALLOWED_ORIGIN = "https://comptaia.fr"
+ALLOWED_ORIGIN = "https://demeps.github.io"
