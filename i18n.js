@@ -8,6 +8,7 @@ const EN = {
   'nav-data': 'Your data',
   'nav-guide': 'Install guide',
   'nav-pricing': 'Pricing',
+  'nav-subscription': 'My subscription',
   'nav-access': 'Request access',
 
   'hero-h1': 'Your invoices, in your workbooks.',
@@ -84,6 +85,10 @@ const EN = {
   'plan-biz-e': 'Teams & firms', 'plan-biz-n': 'Business', 'plan-biz-price': 'Ask for a quote',
   'plan-biz-l1': 'Several people, several workbooks', 'plan-biz-l2': 'Talk to us about your needs',
   'plan-biz-btn': 'Ask for a quote',
+
+  'sub-h2': 'My subscription',
+  'sub-p': "View your subscription, change your card, or cancel it at any time from the Stripe portal: enter the email address used at checkout and you'll get an access link.",
+  'sub-btn': 'Manage my subscription',
 
   'access-h2': 'Invitation-only beta',
   'access-p': "ComptaIA is in closed beta. Write to us describing your activity and the kind of workbook you fill: we will send you the program and the install guide.",
