@@ -95,6 +95,7 @@ code { font: 0.92em ui-monospace, 'Cascadia Code', Consolas, monospace; backgrou
 .plan .price small { font: 400 0.95rem var(--sans); color: var(--muted); }
 .plan ul { margin: 0; padding-left: 18px; font-size: 0.92rem; color: var(--text); }
 .plan ul li { margin-bottom: 4px; }
+.plan .button { margin-top: auto; align-self: flex-start; }
 .trial { background: var(--gold-soft); border-left: 4px solid var(--gold); padding: 12px 16px; margin: 0 0 24px; max-width: 62ch; }
 
 /* A figure that breaks out of the text column's width, for a screenshot that needs to be read. */
