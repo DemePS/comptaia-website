@@ -9,11 +9,11 @@ const EN = {
   'nav-guide': 'Install guide',
   'nav-pricing': 'Pricing',
   'nav-subscription': 'My subscription',
-  'nav-access': 'Request access',
+  'nav-access': 'Contact',
 
   'hero-h1': 'Your invoices, in your workbooks.',
   'hero-lead': 'ComptaIA reads the invoices, statements and documents of a folder, finds the account in your chart of accounts, and fills your workbook. You approve every change before it is saved.',
-  'hero-btn1': 'Request beta access',
+  'hero-btn1': 'See pricing',
   'hero-btn2': 'Read the install guide',
 
   'inv-date': 'Invoice 2026-09-7781, 12 Sep 2026',
@@ -78,7 +78,7 @@ const EN = {
   'price-trial': 'The first 7 days are free, no commitment.',
   'plan-student-e': 'Student', 'plan-student-n': 'Student', 'plan-student-period': '/month',
   'plan-student-l1': 'On proof of student status', 'plan-student-l2': 'Every feature',
-  'plan-student-btn': 'Subscribe',
+  'plan-student-btn': 'Send my proof',
   'plan-pro-e': 'Independent & small business', 'plan-pro-n': 'Professional', 'plan-pro-period': '/month',
   'plan-pro-l1': 'One person', 'plan-pro-l2': 'Every feature',
   'plan-pro-btn': 'Subscribe',
@@ -90,9 +90,9 @@ const EN = {
   'sub-p': "View your subscription, change your card, or cancel it at any time from the Stripe portal: enter the email address used at checkout and you'll get an access link.",
   'sub-btn': 'Manage my subscription',
 
-  'access-h2': 'Invitation-only beta',
-  'access-p': "ComptaIA is in closed beta. Write to us describing your activity and the kind of workbook you fill: we will send you the program and the install guide.",
-  'access-btn1': 'Request access',
+  'access-h2': 'A question?',
+  'access-p': 'Write to us for an Enterprise quote, a question about your subscription, or anything else.',
+  'access-btn1': 'Write to us',
   'access-btn2': 'See the install guide',
 
   'footer-1': 'ComptaIA is not affiliated with any AI model provider or with Microsoft.',
