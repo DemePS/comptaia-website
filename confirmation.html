@@ -56,8 +56,7 @@
 </footer>
 <script src="i18n.js"></script>
 <script>
-// TODO: remplacer par l'URL du Worker Cloudflare une fois déployé (license-worker/README.md).
-const LICENSE_SERVICE = "https://REPLACE_WITH_WORKER_URL.workers.dev"
+const LICENSE_SERVICE = "https://comptaia-license.demeps.workers.dev"
 
 async function claim() {
   const sessionId = new URLSearchParams(location.search).get("session_id")
