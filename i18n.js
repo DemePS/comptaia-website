@@ -96,6 +96,15 @@ const EN = {
   'access-btn2': 'See the install guide',
 
   'footer-1': 'ComptaIA is not affiliated with any AI model provider or with Microsoft.',
+
+  'conf-h1': 'Thank you for your payment',
+  'conf-loading': 'Preparing your access…',
+  'conf-p1': 'Here is your ComptaIA license key. It activates the software and stays valid as long as your subscription is active.',
+  'conf-p2': "Keep it: you'll need it the first time you launch the software.",
+  'conf-btn1': 'Download ComptaIA',
+  'conf-btn2': 'Read the install guide',
+  'conf-err': "We could not prepare your access automatically. Write to us with your payment receipt and we'll send it by hand.",
+  'conf-err-btn': 'Write to us',
 }
 
 function apply(lang) {
